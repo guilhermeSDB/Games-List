@@ -21,7 +21,31 @@
         </nav>
     </header>
     <main>
-        <section>
+        
+        <section id="filters">
+            <div>
+                <div class="filter__search">
+                    <input type="text" placeholder="Procurar">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="rgb(92, 92, 91)">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                    </svg>
+                </div>                
+                <div class="filter_category">
+                    <h2 class="filter__name">Categoria</h2>
+                    <ul class="filter__ul">
+                        <li>Ação</li>
+                        <li>Aventura</li>
+                        <li>Corrida</li>
+                        <li>Simulação</li>
+                        <li>Mitology</li>
+                        <li>Souls Like</li>
+                    </ul>
+                </div>
+            </div>
+           
+        </section>
+
+        <section id="games">
             <div class="game__card">
                 <img class="game__img" src="src/game1.jpg" alt="">
                 <h1 class="game__title">Hellblade: Senua's Sacrifice</h1>
@@ -62,7 +86,10 @@
                 <h1 class="game__title">Rage 2</h1>
             </div>
         </section>
+
     </main>
-    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
+    <script src="js/app.js"></script>    
 </body>
 </html>
