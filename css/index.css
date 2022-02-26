@@ -74,11 +74,18 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   /* roundness of the scroll thumb */
 }
+body .selectFilter {
+  color: #ED5464 !important;
+  font-weight: 700;
+  transition: 0.2s;
+}
 body header {
-  padding: 2rem 0rem;
+  width: 90%;
+  padding: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
 }
 body header nav img {
   width: 40px;
@@ -104,7 +111,7 @@ body main section#filters {
   align-items: baseline;
 }
 body main section#filters div {
-  margin: 1.5rem 0;
+  width: 70%;
 }
 body main section#filters div div.filter__search {
   width: 100%;
@@ -129,32 +136,56 @@ body main section#filters div div.filter__search svg {
   right: 10px;
   cursor: pointer;
 }
-body main section#filters div div h2.filter__name {
-  text-transform: uppercase;
-  font-weight: 700;
+body main section#filters div div.filter_category {
+  width: 100%;
 }
-body main section#filters div div ul.filter__ul li {
+body main section#filters div div.filter_category h2.filter__name {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 2rem 0;
+  position: relative;
+  font-size: 1rem;
+}
+body main section#filters div div.filter_category h2.filter__name::after {
+  content: "";
+  width: 100%;
+  height: 1.7px;
+  background: #c5c5c5;
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+}
+body main section#filters div div.filter_category ul.filter__ul li {
   cursor: pointer;
   font-weight: 500;
   margin: 1rem 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: 0.5s;
   color: #9b9a9a;
+  display: flex;
+  justify-content: space-between;
 }
-body main section#filters div div ul.filter__ul li:hover {
+body main section#filters div div.filter_category ul.filter__ul li:hover {
   color: #ED5464;
 }
-body main section#filters div div ul.filter__ul li:focus {
+body main section#filters div div.filter_category ul.filter__ul li:focus {
   color: #ED5464;
 }
 body main section#games {
   width: 90%;
   height: 100%;
+}
+body main section#games h3.filter__active {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 2rem;
+}
+body main section#games div.games__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
-body main section#games div.game__card {
+body main section#games div.games__list div.game__card {
   width: 15rem;
   height: 25rem;
   margin: 1.5rem 2rem;
@@ -162,8 +193,12 @@ body main section#games div.game__card {
   overflow: hidden;
   position: relative;
   transition: 0.6s;
+  opacity: 1;
 }
-body main section#games div.game__card img.game__img {
+body main section#games div.games__list div.game__card:hover {
+  box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.7);
+}
+body main section#games div.games__list div.game__card img.game__img {
   cursor: pointer;
   -o-object-fit: cover;
      object-fit: cover;
@@ -171,7 +206,7 @@ body main section#games div.game__card img.game__img {
   height: 100%;
   transition: 0.5s;
 }
-body main section#games div.game__card h1.game__title {
+body main section#games div.games__list div.game__card h1.game__title {
   text-align: center;
   opacity: 0.8;
   width: 100%;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Games Sevred</title>
     <link rel="stylesheet" href="css/index.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
 </head>
 <body>
     <header>
@@ -25,20 +26,21 @@
         <section id="filters">
             <div>
                 <div class="filter__search">
-                    <input type="text" placeholder="Procurar">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="rgb(92, 92, 91)">
+                    <input class="search__input" type="text" placeholder="Procurar">
+                    <svg class="search__button" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="rgb(92, 92, 91)">
                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                     </svg>
                 </div>                
                 <div class="filter_category">
-                    <h2 class="filter__name">Categoria</h2>
+                    <h2 class="filter__name">Categorias</h2>
                     <ul class="filter__ul">
-                        <li>Ação</li>
-                        <li>Aventura</li>
-                        <li>Corrida</li>
-                        <li>Simulação</li>
-                        <li>Mitology</li>
-                        <li>Souls Like</li>
+                        <li class="selectFilter">Todas<span>1.100</span></li> 
+                        <li>Ação<span>230</span></li> 
+                        <li>Aventura <span>69</span></li>
+                        <li>Corrida <span>23</span></li>
+                        <li>Simulação <span>3</span></li>
+                        <li>Mitology <span>11</span></li>
+                        <li>Souls Like <span>24</span></li>
                     </ul>
                 </div>
             </div>
@@ -46,50 +48,53 @@
         </section>
 
         <section id="games">
-            <div class="game__card">
-                <img class="game__img" src="src/game1.jpg" alt="">
-                <h1 class="game__title">Hellblade: Senua's Sacrifice</h1>
+            <h3 class="filter__active">Todas</h3>
+            <div class="games__list">
+                <div class=" game__card">
+                    <img class="game__img" src="src/game1.jpg" alt="">
+                    <h1 class="game__title">Hellblade: Senua's Sacrifice</h1>
+                </div>
+    
+                <div class="game__card">
+                    <img class="game__img" src="src/game2.jpg" alt="">
+                    <h1 class="game__title">Hellblade 2</h1>
+                </div>
+    
+                <div class="game__card">
+                    <img class="game__img" src="src/game3.jpg" alt="">
+                    <h1 class="game__title">Forza Horizon 5</h1>
+                </div>
+    
+                <div class="game__card">
+                    <img class="game__img" src="src/game4.jpg" alt="">
+                    <h1 class="game__title">Forza Horizon 4</h1>
+                </div>
+    
+                <div class="game__card">
+                    <img class="game__img" src="src/game5.webp" alt="">
+                    <h1 class="game__title">Elden Ring</h1>
+                </div>
+    
+                <div class="game__card">
+                    <img class="game__img" src="src/game6.jfif" alt="">
+                    <h1 class="game__title">Nioh 2</h1>
+                </div>
+    
+                <div class="game__card">
+                    <img class="game__img" src="src/game7.jpg" alt="">
+                    <h1 class="game__title">Dark Souls 3</h1>
+                </div>
+    
+                <div class="game__card">
+                    <img class="game__img" src="src/game8.webp" alt="">
+                    <h1 class="game__title">Rage 2</h1>
+                </div>
             </div>
-
-            <div class="game__card">
-                <img class="game__img" src="src/game2.jpg" alt="">
-                <h1 class="game__title">Hellblade 2</h1>
-            </div>
-
-            <div class="game__card">
-                <img class="game__img" src="src/game3.jpg" alt="">
-                <h1 class="game__title">Forza Horizon 5</h1>
-            </div>
-
-            <div class="game__card">
-                <img class="game__img" src="src/game4.jpg" alt="">
-                <h1 class="game__title">Forza Horizon 4</h1>
-            </div>
-
-            <div class="game__card">
-                <img class="game__img" src="src/game5.webp" alt="">
-                <h1 class="game__title">Elden Ring</h1>
-            </div>
-
-            <div class="game__card">
-                <img class="game__img" src="src/game6.jfif" alt="">
-                <h1 class="game__title">Nioh 2</h1>
-            </div>
-
-            <div class="game__card">
-                <img class="game__img" src="src/game7.jpg" alt="">
-                <h1 class="game__title">Dark Souls 3</h1>
-            </div>
-
-            <div class="game__card">
-                <img class="game__img" src="src/game8.webp" alt="">
-                <h1 class="game__title">Rage 2</h1>
-            </div>
+            
         </section>
 
     </main>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
     <script src="js/app.js"></script>    
+    <script src="js/filter.js"></script>    
 </body>
 </html>

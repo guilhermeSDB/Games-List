@@ -22,11 +22,19 @@ body{
         //border: 1px solid orange;  /* creates padding around scroll thumb */
     }
 
+    .selectFilter{
+        color: $contrast!important;
+        font-weight: 700;
+        transition: 0.2s;
+    }
+
     header{
-        padding: 2rem 0rem;
+        width: 90%;
+        padding: 2rem;
         display: flex;
-        justify-content: space-around;
-        align-items: center;        
+        justify-content: space-between;
+        align-items: center;     
+        margin: 0 auto;   
 
         nav{
             img{
@@ -56,7 +64,7 @@ body{
             align-items: baseline;   
             
             div{
-                margin: 1.5rem 0;
+                width: 70%;
 
                 div.filter__search{
                     width: 100%;
@@ -85,10 +93,25 @@ body{
                     
                 }
 
-                div{
+                div.filter_category{
+                    width: 100%;
+
                     h2.filter__name{
                         text-transform: uppercase;
-                        font-weight: 700;
+                        font-weight: 500;
+                        margin: 2rem 0;
+                        position: relative;
+                        font-size: 1rem;
+
+                        &::after{
+                            content: "";
+                            width: 100%;
+                            height: 1.7px;
+                            background: #c5c5c5;
+                            position: absolute;
+                            top: 1.5rem;
+                            left: 0;
+                        }
                     }
 
                     ul.filter__ul{
@@ -96,9 +119,11 @@ body{
                             cursor: pointer;
                             font-weight: 500;
                             margin: 1rem 0;
-                            font-size: 1rem;
+                            font-size: .9rem;
                             transition: .5s;
                             color: rgb(155, 154, 154);
+                            display: flex;
+                            justify-content: space-between;
 
                             &:hover{
                                 color: $contrast;
@@ -116,43 +141,58 @@ body{
         section#games{
             width: 90%;
             height: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
 
-            div.game__card{
-                width: 15rem;
-                height: 25rem;
-                margin: 1.5rem 2rem;
-                border-radius: 20px;
-                overflow: hidden;
-                position: relative;
-                transition: 0.6s;
+            h3.filter__active{
+                font-size: 2rem;
+                font-weight: 300;
+                margin: 0 2rem;
+            }           
+            
+            div.games__list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
 
-                img.game__img{
-                    cursor: pointer;
-                    object-fit: cover;                    
-                    width: 100%;
-                    height: 100%;
-                    transition: 0.5s;
-                }
-
-                h1.game__title{
-                    text-align: center;
-                    opacity: .8;
-                    width: 100%;
+                div.game__card{
+                    width: 15rem;
+                    height: 25rem;
+                    margin: 1.5rem 2rem;
                     border-radius: 20px;
-                    color: $white;
-                    position: absolute;
-                    bottom: 0;
-                    font-size: 1.5rem;
-                    padding: 1.5rem 0;
-                    background: transparent;
-                    background: -moz-linear-gradient(180deg, transparent 0%, $black 100%);
-                    background: -webkit-linear-gradient(180deg, transparent 0%, $black 100%);
-                    background: linear-gradient(180deg, transparent, $black 100%);
+                    overflow: hidden;
+                    position: relative;
+                    transition: 0.6s;
+                    opacity: 1;
+
+                    &:hover{
+                        -webkit-box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.7); 
+                        box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.7);
+                    }
+    
+                    img.game__img{
+                        cursor: pointer;
+                        object-fit: cover;                    
+                        width: 100%;
+                        height: 100%;
+                        transition: 0.5s;
+                    }
+    
+                    h1.game__title{
+                        text-align: center;
+                        opacity: .8;
+                        width: 100%;
+                        border-radius: 20px;
+                        color: $white;
+                        position: absolute;
+                        bottom: 0;
+                        font-size: 1.5rem;
+                        padding: 1.5rem 0;
+                        background: transparent;
+                        background: -moz-linear-gradient(180deg, transparent 0%, $black 100%);
+                        background: -webkit-linear-gradient(180deg, transparent 0%, $black 100%);
+                        background: linear-gradient(180deg, transparent, $black 100%);
+                    }
                 }
-            }
+            }            
         }
     }
 }
