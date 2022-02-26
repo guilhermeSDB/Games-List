@@ -11,6 +11,7 @@ $(document).ready(function(){
         var index = array.indexOf(elem); // Pesquisa o elemento e pega o index do mesmo
         if (index > -1) {
             array.splice(index, 1);
+            console.log('Entrei no if')
         }
         refreshText($actualFiltering,$arrayFilters)
     }
@@ -44,16 +45,18 @@ $(document).ready(function(){
                 addElement($arrayFilters, $indexItem)          
                 $($firstItemLi).removeClass('selectFilter')
             }else{
+
                 $(this).removeClass('selectFilter')
-                $indexItem = this.childNodes[0].nodeValue.trim()
-                removeElement($arrayFilters,$indexItem)  
+                $indexItem = this.childNodes[0].nodeValue.trim()                
+                removeElement($arrayFilters, $indexItem)
+
                 if(lenghtClass() == 0 ){ //Verifica se não tem mais classes com SelectFilter
+                    $arrayFilters = []
                     $($actualFiltering).text($firstItemLiValue)
-                    $($firstItemLi).addClass('selectFilter') 
+                    $($firstItemLi).addClass('selectFilter')
                 }
             }    
         }else{ 
-            console.log($('.selectFilter').length)
             $($liList).removeClass('selectFilter')
             $($firstItemLi).addClass('selectFilter')
             $arrayFilters = []

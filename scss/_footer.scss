@@ -1,0 +1,14 @@
+footer{ 
+    margin: 5rem 0 0 0;
+    background-color: $black;
+    font-weight: 200;
+    color: $white;
+    padding: 1.5rem 0;
+    
+    text-align: center;
+
+    a{
+        color: $contrast;
+        text-decoration: none!important;
+    }
+}

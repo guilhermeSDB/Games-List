@@ -9,4 +9,9 @@ $(document).ready(function(){
         }).css('opacity','0')
     })
 
+    $('h1#txtFilterMobile').on('click', function(){
+        $('svg.arrowFilterMobile').toggleClass('arrowUP')
+        $('.filter_category').toggle('filterHeight')
+    })
+
 })

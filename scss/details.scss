@@ -1,0 +1,32 @@
+@import "reset";
+@import "styles";
+
+body{
+
+    font-family: $MontSerrat;
+    background-color: rgb(245, 245, 245);
+    font-weight: 400;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+        width: 9px;               /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;        /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $contrast;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        //border: 1px solid orange;  /* creates padding around scroll thumb */
+    }
+
+    @import "header";
+
+    main{
+
+    }
+
+    @import "footer";
+}
