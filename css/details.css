@@ -54,6 +54,10 @@ table {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: whitesmoke;
@@ -100,6 +104,7 @@ body header nav ul, body header nav li {
   align-items: center;
 }
 body main {
+  overflow-x: hidden;
   width: 100%;
 }
 body main .swiper {
@@ -139,7 +144,7 @@ body main section.details__infos div#details__info {
 @media screen and (max-width: 1024px) {
   body main section.details__infos div#details__info {
     width: 90%;
-    padding: 0rem;
+    padding: 1rem;
   }
 }
 body main section.details__infos div#details__info div#back_to_home {
@@ -207,7 +212,7 @@ body main section.details__infos div#details__info div.game__info p.game__status
   color: #107B10;
 }
 body main section.more__info {
-  margin: 10rem 0;
+  margin: 10rem 0 5rem 0;
 }
 @media screen and (max-width: 1024px) {
   body main section.more__info {

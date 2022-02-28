@@ -14,4 +14,10 @@ $(document).ready(function(){
         $('.filter_category').toggle('filterHeight')
     })
 
+    AOS.init();
+
+    new fullpage('#fullpage', {
+        //options here
+    });
+
 })
