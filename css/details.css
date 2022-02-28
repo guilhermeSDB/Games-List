@@ -99,12 +99,150 @@ body header nav ul, body header nav li {
   display: flex;
   align-items: center;
 }
+body main {
+  width: 100%;
+}
+body main .swiper {
+  width: 100%;
+  height: 150px;
+}
+@media screen and (max-width: 1024px) {
+  body main .swiper {
+    height: 200px;
+  }
+}
+body main section.details__infos {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100vw;
+  height: 85%;
+}
+@media screen and (max-width: 1024px) {
+  body main section.details__infos {
+    grid-template-columns: 1fr;
+  }
+}
+body main section.details__infos div#details__video {
+  height: 100%;
+  transition: 0.5s;
+}
+body main section.details__infos div#details__video img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+body main section.details__infos div#details__info {
+  width: 90%;
+  padding-left: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  body main section.details__infos div#details__info {
+    width: 90%;
+    padding: 0rem;
+  }
+}
+body main section.details__infos div#details__info div#back_to_home {
+  display: flex;
+  align-items: center;
+}
+body main section.details__infos div#details__info div#back_to_home svg {
+  width: 20px;
+  fill: #ED5464;
+  margin: 1rem 0;
+}
+body main section.details__infos div#details__info div#back_to_home a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #ED5464;
+}
+body main section.details__infos div#details__info div.game__info {
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1024px) {
+  body main section.details__infos div#details__info div.game__info {
+    width: 100vw;
+  }
+}
+body main section.details__infos div#details__info div.game__info h1.game__title {
+  font-size: 2.5rem;
+}
+body main section.details__infos div#details__info div.game__info p {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+body main section.details__infos div#details__info div.game__info p.game__genre {
+  color: #ED5464;
+  margin-top: 1rem;
+}
+body main section.details__infos div#details__info div.game__info p.game__year-producer {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+body main section.details__infos div#details__info div.game__info div.game__plataforms {
+  margin: 1rem 0;
+}
+body main section.details__infos div#details__info div.game__info p.galery_name {
+  font-weight: 500;
+  font-style: normal;
+}
+body main section.details__infos div#details__info div.game__info div#game__img-galeria {
+  margin: 1rem 0;
+}
+body main section.details__infos div#details__info div.game__info div#game__img-galeria img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+body main section.details__infos div#details__info div.game__info p.game__status {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  color: #107B10;
+}
+body main section.more__info {
+  margin: 10rem 0;
+}
+@media screen and (max-width: 1024px) {
+  body main section.more__info {
+    margin: 5rem 0;
+  }
+}
+body main section.more__info div {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  body main section.more__info div {
+    width: 90%;
+  }
+}
+body main section.more__info div h1 {
+  margin: 3rem 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+body main section.more__info div p {
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #535353;
+}
 body footer {
   margin: 5rem 0 0 0;
   background-color: #141414;
   font-weight: 200;
   color: #eeeeee;
   padding: 1.5rem 0;
+  position: relative;
+  bottom: 0;
   text-align: center;
 }
 body footer a {

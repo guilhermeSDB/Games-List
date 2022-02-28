@@ -1,0 +1,165 @@
+@import "../reset";
+@import "../styles";
+
+body{
+
+    font-family: $MontSerrat;
+    background-color: rgb(245, 245, 245);
+    font-weight: 400;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+        width: 9px;               /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;        /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $contrast;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        //border: 1px solid orange;  /* creates padding around scroll thumb */
+    }
+
+    @import "../header";
+
+    main{
+        width: 100%;
+
+        .swiper {
+            width: 100%;
+            height: 150px;
+
+            @media screen and(max-width: 1024px) { height: 200px; }
+        }
+
+        
+
+        section.details__infos{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            width: 100vw;
+            height: 85%;
+
+            @media screen and(max-width: 1024px) { grid-template-columns: 1fr; }
+
+            div#details__video{
+                height: 100%;
+                transition: 0.5s;
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%
+                }
+
+            }
+
+            div#details__info{
+                width: 90%;
+                padding-left: 2rem;
+
+                @media screen and(max-width: 1024px) { width: 90%; padding: 0rem; }
+                
+                
+
+                div#back_to_home{
+                    display: flex;
+                    align-items: center;
+
+                    svg{
+                        width: 20px;
+                        fill: $contrast;
+                        margin: 1rem 0;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        font-weight: 600;
+                        color: $contrast;
+                    }
+                }
+
+                div.game__info{
+                    width: 65vw;
+                    display: flex;
+                    flex-direction: column;
+
+                    @media screen and(max-width: 1024px) { width: 100vw; }
+
+                    h1.game__title{
+                        font-size: 2.5rem;
+                    }
+
+                    p{
+                        font-style: italic;
+                        font-weight: 300;
+                        font-size: 1.2rem; 
+                    }
+
+                    p.game__genre{
+                        color: $contrast;
+                        margin-top: 1rem;             
+                    }
+
+                    p.game__year-producer{
+                        margin-top: .5rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    div.game__plataforms{
+                        margin: 1rem 0;
+                    }
+
+                    p.galery_name{
+                        font-weight: 500;
+                        font-style: normal;
+                    }
+
+                    div#game__img-galeria{
+                        margin: 1rem 0;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 10px;
+                        }                             
+                    }
+
+                    p.game__status{
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        font-style: normal;
+                        font-weight: 700;
+                        color: #107B10;
+                    }
+                }
+            }
+        }
+
+        section.more__info{
+            margin: 10rem 0;
+            @media screen and(max-width: 1024px) { margin: 5rem 0; }
+            div{
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+                @media screen and(max-width: 1024px) { width: 90%; }
+                h1{
+                    margin: 3rem 0;
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                }
+    
+                p{
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    color: #535353;
+                }
+            }
+        }
+    }
+
+    @import "../footer";
+}

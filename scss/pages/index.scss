@@ -1,5 +1,5 @@
-@import "reset";
-@import "styles";
+@import "../reset";
+@import "../styles";
 
 html{
     scroll-behavior: smooth;
@@ -31,7 +31,7 @@ body{
         transition: 0.2s;
     }
 
-    @import "header";
+    @import "../header";
 
     main{
         display: grid;
@@ -213,5 +213,5 @@ body{
         }
     }
 
-    @import "footer";
+    @import "../footer";
 }

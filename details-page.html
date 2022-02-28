@@ -4,10 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="src/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon-16x16.png">
+    <link rel="manifest" href="src/site.webmanifest">
     <link rel="stylesheet" href="css/details.min.css">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
     <title>Detalhes - Games Sevred</title>
 </head>
 <body>
+    <header>
+        <img src="src/logo.png" alt="" width="50px">
+        <nav>
+            <ul>
+                <li> <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30px" class="h-5 w-5" viewBox="0 0 20 20" fill="#ED5464">
+                    <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd" />
+                  </svg></a></li>
+                
+                <li><a href=""><img src="src/womem.jfif" alt=""></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="details__infos">
+            <div id="details__video">
+                 <img src="src/game1.jpg" alt="">
+                <!-- <iframe width="560" height="500" src="https://www.youtube.com/embed/mF2Hh-OExhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            </div>
+            <div id="details__info">
+                <div id="back_to_home">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <a href="index.html">voltar</a>
+                </div>
+                <div class="game__info">
+                    <h1 class="game__title">Hellblade Senua's Sacrifice</h1>
+                    <p class="game__genre">Ação,Terror</p>
+                    <p class="game__year-producer">2019, Ninja Theory</p>
+                    <div class="game__plataforms">
+                        <a href="https://store.steampowered.com/app/414340/Hellblade_Senuas_Sacrifice/" target="_blank"><img src="src/steam.png" alt=""></a>                    
+                        <a href="https://www.xbox.com/pt-BR/games/store/hellblade-senuas-sacrifice/9NCLP4LV5K7Z" target="_blank"><img src="src/xbox.png" alt=""></a>                    
+                        <a href="https://store.playstation.com/pt-br/product/UP3064-CUSA07511_00-HELLB2017NT002EN" target="_blank"><img src="src/pstore.png" alt=""></a>                    
+                </div>
+                <p class="galery_name">Galeria</p>
+                <div id="game__img-galeria" class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="src/hellblade1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="src/hellblade2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="src/hellblade3.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="src/hellblade4.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="src/hellblade5.jpg" alt="">
+                        </div>
+
+                    </div>
+                                      
+                </div>
+                    <p class="game__status">CRACKED</p>               
+                
+            </div>
+        </section>
+
+        <section class="more__info">
+            <div>
+                <h1>Hellblade Senuas Sacrifice</h1>
+                <p>Dos criadores de Heavenly Sword, Enslaved: Odyssey to the West, e DmC: Devil May Cry, chega agora a viagem brutal de uma guerreira até ao mito e a loucura. <br>
+                    Na era dos vikings, uma guerreira celta parte numa jornada pessoal arrepiante até ao inferno viking para lutar pela alma de seu falecido amado. <br>
+                    Criado em parceria com neurocientistas e pessoas que vivenciam psicose, Hellblade: Senua’s Sacrifice vai te levar para as profundezas da mente de Senua.</p>
+            </div>
+           
+        </section>
+    </main>
+
+
+    <footer>
+        Feito por <a href="https://github.com/guilhermeSDB" target="_blank">Guilherme S.</a>
+        <p>Todos os direitos reservados, 2021</p> 
+    </footer>
     
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
 </body>
 </html>
