@@ -136,6 +136,10 @@ body main section.details__infos div#details__video img {
      object-fit: cover;
   width: 100%;
   height: 100%;
+  -webkit-animation-name: animationImgLeftToRight;
+          animation-name: animationImgLeftToRight;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 body main section.details__infos div#details__info {
   width: 90%;
@@ -254,3 +258,23 @@ body footer a {
   color: #ED5464;
   text-decoration: none !important;
 }
+
+@-webkit-keyframes animationImgLeftToRight {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animationImgLeftToRight {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes animationContentLeftToRight {}
+@keyframes animationContentLeftToRight {}
